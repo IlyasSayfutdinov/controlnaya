@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Коллекция Фильмов</title>
+    <link rel="stylesheet" href="movies.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Коллекция Фильмов</h1>
+
+        <section>
+            <p>Используйте эту коллекцию для отслеживания фильмов, которые вы посмотрели или хотите посмотреть. Отмечайте фильмы как просмотренные и фильтруйте по статусу.</p>
+        </section>
+
+        <div class="movie-form">
+            <h2>Добавить Фильм</h2>
+            <form id="movie-form">
+                <label for="movie-title">Название фильма:</label>
+                <input type="text" id="movie-title" placeholder="Например, Начало" required />
+                
+                <div class="watched-toggle">
+                    <label for="movie-status">Отметить как просмотренный:</label>
+                    <label class="switch">
+                        <input type="checkbox" id="movie-status">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <button type="submit">Добавить Фильм</button>
+            </form>
+        </div>
+
+        <div class="movie-filter">
+            <h2>Фильтры</h2>
+
+            <fieldset>
+                <legend>Статус:</legend>
+                <label><input type="radio" name="status-filter" value="all" checked /> Все</label>
+                <label><input type="radio" name="status-filter" value="watched" /> Просмотренные</label>
+                <label><input type="radio" name="status-filter" value="unwatched" /> Непросмотренные</label>
+            </fieldset>
+
+            <label><input type="checkbox" id="favorite-filter" /> Показывать только избранное</label>
+        </div>
+
+        <div class="movie-list">
+            <h2>Список Фильмов</h2>
+            <div id="movie-list" class="card-container">
+            
+            </div>
+        </div>
+    </div>
+    <script src="movies.js"></script>
+</body>
+</html>
